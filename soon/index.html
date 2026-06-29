@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Broadimagi service page coming soon." />
+    <title>Coming Soon - Broadimagi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <main class="soon-page">
+      <section class="soon-panel">
+        <a class="brand soon-brand" href="../index.html#top" aria-label="Broadimagi home">
+          <img src="../images/broadimagi-logo.png" alt="Broadimagi logo" />
+          <span>Broadimagi</span>
+        </a>
+        <p class="eyebrow" id="soon-kicker">Service page</p>
+        <h1 id="soon-title">Coming Soon</h1>
+        <p id="soon-copy">This service page is being prepared. For now, you can contact Broadimagi and we will walk you through the solution directly.</p>
+        <div class="soon-actions">
+          <a class="btn btn-primary" href="mailto:broadimagi@broadimagi.com">Get In Touch</a>
+          <a class="btn btn-secondary" href="../index.html#services">Back to Services</a>
+        </div>
+      </section>
+    </main>
+    <script>
+      const names = {
+        "custom-development": "Custom System Development",
+        "it-consulting": "IT & Digital Consulting",
+        "wms": "Warehouse Management System",
+        "cloud-services": "Cloud Infrastructure Services",
+        "business-process-automation": "Business Process Automation"
+      };
+      const params = new URLSearchParams(window.location.search);
+      const service = params.get("service");
+      const name = names[service] || "This Service";
+      document.title = name + " - Coming Soon - Broadimagi";
+      document.querySelector("#soon-kicker").textContent = name;
+      document.querySelector("#soon-title").textContent = name + " is coming soon";
+    </script>
+  </body>
+</html>

@@ -1,19 +1,46 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-  <title>Schedule Consultation - Broadimagi</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../assets/index.css" />
-</head>
-<body>
-  <div id="root"></div>
-  <script type="module">
-    window.__SERVICE_PAGE__ = 'schedule-consultation';
-  </script>
-  <script type="module" src="../assets/index.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Schedule a consultation with Broadimagi for IT solutions, automation, cloud, WMS, custom systems, MyGuest, or MySked." />
+    <title>Schedule Consultation - Broadimagi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#consultation-main">Skip to content</a>
+    <header class="site-header">
+      <div class="container navbar">
+        <a class="brand" href="../index.html#top" aria-label="Broadimagi home"><img src="../images/broadimagi-logo.png" alt="Broadimagi logo" /><span>Broadimagi</span></a>
+        <nav class="nav-links" id="primary-navigation" aria-label="Primary navigation"><a href="../index.html#services">Services</a><a href="../index.html#why-us">Why Us</a><a href="../index.html#contact">Contact</a><a href="./">Schedule Consultation</a></nav>
+        <div class="nav-actions"><a class="btn btn-primary desktop-only" href="mailto:broadimagi@broadimagi.com">Get In Touch</a><button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation"><span></span></button></div>
+      </div>
+    </header>
+    <main id="consultation-main" class="consultation-page">
+      <section class="service-hero">
+        <div class="container consultation-grid">
+          <div>
+            <p class="eyebrow">Schedule Consultation</p>
+            <h1>Let us shape the right digital solution with you</h1>
+            <p class="hero-copy">Tell us what you want to improve, what service you are interested in, and your preferred schedule. The form prepares an email request so your team can start the conversation with useful context.</p>
+            <div class="metrics consultation-metrics"><div class="metric"><strong>01</strong><span>Share your need</span></div><div class="metric"><strong>02</strong><span>Pick a schedule</span></div><div class="metric"><strong>03</strong><span>Send request</span></div></div>
+          </div>
+          <form class="consultation-form" id="consultation-form">
+            <label>Full name<input name="name" type="text" required placeholder="Your name" /></label>
+            <label>Email<input name="email" type="email" required placeholder="you@example.com" /></label>
+            <label>Company / organization<input name="company" type="text" placeholder="Company name" /></label>
+            <label>Service interest<select name="service" required><option value="">Select a service</option><option>Custom System Development</option><option>IT & Digital Consulting</option><option>Warehouse Management System</option><option>Cloud Infrastructure Services</option><option>MyGuest - Guest Check-In System</option><option>MySked - Transport Scheduling Web App</option><option>Business Process Automation</option></select></label>
+            <div class="form-row"><label>Preferred date<input name="date" type="date" required /></label><label>Preferred time<input name="time" type="time" required /></label></div>
+            <label>What do you want to improve?<textarea name="message" rows="5" required placeholder="Briefly describe the current challenge, goal, or workflow."></textarea></label>
+            <button class="btn btn-primary" type="submit">Prepare Consultation Request</button>
+            <p class="form-note">This opens your email app with the request details. You can review before sending.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script src="../app.js" defer></script>
+  </body>
 </html>
